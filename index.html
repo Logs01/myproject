@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Worst Movie Booking UI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Not a Oridinary Movie Booking System -by Team Thamizhi</h1>
+
+<!-- Confusing Navigation -->
+<div class="menu">
+<button onclick="showPage('seats')">Start Booking</button>
+<button onclick="showPage('payment')">Movies</button>
+<button onclick="showPage('movies')">Payment</button>
+<button onclick="showPage('home')">Cancel</button>
+</div>
+
+<!-- HOME -->
+<div id="home" class="page">
+<h2>Welcome</h2>
+<p>Click Start Booking to begin confusion.</p>
+</div>
+
+<!-- SEAT SELECTION BEFORE MOVIE -->
+<div id="seats" class="page">
+
+<h2>Select Seats (Movie Unknown)</h2>
+
+<div class="seat-grid">
+
+<button onclick="selectSeat('A1')">A1</button>
+<button onclick="selectSeat('A2')">A2</button>
+<button onclick="selectSeat('A3')">A3</button>
+
+<button onclick="selectSeat('B1')">B1</button>
+<button onclick="selectSeat('B2')">B2</button>
+<button onclick="selectSeat('B3')">B3</button>
+
+<button onclick="selectSeat('C1')">C1</button>
+<button onclick="selectSeat('C2')">C2</button>
+<button onclick="selectSeat('C3')">C3</button>
+
+</div>
+
+<button onclick="showPage('movies')">Next</button>
+
+</div>
+
+<!-- MOVIE SELECTION WITH CONFUSING DROPDOWNS -->
+<div id="movies" class="page">
+
+<h2>Select Movie</h2>
+
+<select>
+<option>Select Category</option>
+<option>Action</option>
+<option>Drama</option>
+<option>Random</option>
+</select>
+
+<select>
+<option>Select Language</option>
+<option>English</option>
+<option>Tamil</option>
+<option>Unknown</option>
+</select>
+
+<select id="movie">
+<option>Select Movie</option>
+<option>Avatar</option>
+<option>Spider Man</option>
+<option>Joker</option>
+<option>Some Random Movie</option>
+</select>
+
+<br><br>
+
+<button onclick="showPage('payment')">Back</button>
+<button onclick="showPage('seats')">Next</button>
+
+</div>
+
+<!-- PAYMENT BEFORE CONFIRMATION -->
+<div id="payment" class="page">
+
+<h2>Payment Page</h2>
+
+<label>Card Number</label>
+<input type="text">
+
+<label>CVV</label>
+<input type="text">
+
+<br><br>
+
+<button onclick="cancelBooking()">Confirm Booking</button>
+<button onclick="confirmBooking()">Cancel Booking</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
