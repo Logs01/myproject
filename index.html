@@ -1,102 +1,85 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
-<title>Worst Movie Booking UI</title>
-<link rel="stylesheet" href="style.css">
+    <title>Ugly Movie Booking System</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<h1>Not a Oridinary Movie Booking System -by Team Thamizhi</h1>
+<h1>Not an Ordinary Movie Booking System - By Team Thamizhi</h1>
 
-<!-- Confusing Navigation -->
 <div class="menu">
-<button onclick="showPage('seats')">Start Booking</button>
-<button onclick="showPage('payment')">Movies</button>
-<button onclick="showPage('movies')">Payment</button>
-<button onclick="showPage('home')">Cancel</button>
-</div>
 
-<!-- HOME -->
-<div id="home" class="page">
-<h2>Welcome</h2>
-<p>Click Start Booking to begin confusion.</p>
-</div>
-
-<!-- SEAT SELECTION BEFORE MOVIE -->
-<div id="seats" class="page">
-
-<h2>Select Seats (Movie Unknown)</h2>
-
-<div class="seat-grid">
-
-<button onclick="selectSeat('A1')">A1</button>
-<button onclick="selectSeat('A2')">A2</button>
-<button onclick="selectSeat('A3')">A3</button>
-
-<button onclick="selectSeat('B1')">B1</button>
-<button onclick="selectSeat('B2')">B2</button>
-<button onclick="selectSeat('B3')">B3</button>
-
-<button onclick="selectSeat('C1')">C1</button>
-<button onclick="selectSeat('C2')">C2</button>
-<button onclick="selectSeat('C3')">C3</button>
+<button onclick="startBooking()">Start Booking</button> <button onclick="cancelBooking()">Cancel Booking</button> <button onclick="generateSeat()">Random Seat</button>
 
 </div>
 
-<button onclick="showPage('movies')">Next</button>
+<div id="step1" class="section">
 
-</div>
-
-<!-- MOVIE SELECTION WITH CONFUSING DROPDOWNS -->
-<div id="movies" class="page">
-
-<h2>Select Movie</h2>
-
-<select>
-<option>Select Category</option>
-<option>Action</option>
-<option>Drama</option>
-<option>Random</option>
-</select>
-
-<select>
-<option>Select Language</option>
-<option>English</option>
-<option>Tamil</option>
-<option>Unknown</option>
-</select>
+<h2>Step 1: Choose Movie</h2>
 
 <select id="movie">
-<option>Select Movie</option>
-<option>Avatar</option>
-<option>Spider Man</option>
-<option>Joker</option>
-<option>Some Random Movie</option>
+
+<option>Avengers: Budget Version</option>
+<option>Fast & Furious Bicycle Drift</option>
+<option>Harry Potter and the Missing Homework</option>
+<option>Spider-Man: No Network Connection</option>
+<option>Titanic 2: Jack Floats Back</option>
+
 </select>
 
 <br><br>
 
-<button onclick="showPage('payment')">Back</button>
-<button onclick="showPage('seats')">Next</button>
+<button onclick="nextSeats()">Next</button>
 
 </div>
 
-<!-- PAYMENT BEFORE CONFIRMATION -->
-<div id="payment" class="page">
+<div id="step2" class="section">
 
-<h2>Payment Page</h2>
+<h2>Step 2: Choose Seats</h2>
 
-<label>Card Number</label>
-<input type="text">
+<select id="seats">
 
-<label>CVV</label>
-<input type="text">
+<option>1 Seat (Lonely Mode)</option>
+<option>2 Seats (Date maybe?)</option>
+<option>5 Seats (Entire Gang)</option>
+
+</select>
 
 <br><br>
 
-<button onclick="cancelBooking()">Confirm Booking</button>
-<button onclick="confirmBooking()">Cancel Booking</button>
+<button onclick="nextPayment()">Next</button>
+
+</div>
+
+<div id="step3" class="section">
+
+<h2>Step 3: Payment</h2>
+
+<select id="payment">
+
+<option>UPI (Instant regret)</option>
+<option>Credit Card (Money gone)</option>
+<option>Cash (Old school hero)</option>
+
+</select>
+
+<br><br>
+
+<button onclick="makePayment()">Pay Now</button>
+
+</div>
+
+<div id="ticket" class="section">
+
+<h2>🎟 Your Ticket</h2>
+
+<p id="ticketText"></p>
+
+<button onclick="location.reload()">Book Again</button>
 
 </div>
 
