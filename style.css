@@ -1,40 +1,63 @@
 body{
-background: rgb(1, 147, 152);
-font-family: Comic Sans MS;
+
+background:#00ffff;
+font-family:Comic Sans MS;
 text-align:center;
+
 }
 
 h1{
-color: purple;
-background: yellow;
-padding:10px;
+
+background:yellow;
+color:purple;
+padding:20px;
+font-size:40px;
+
 }
 
-.menu button{
+.menu{
+
+margin:20px;
+
+}
+
+button{
+
 background:red;
 color:white;
-padding:10px;
-margin:5px;
-}
-
-.page{
-display:none;
-margin-top:30px;
-}
-
-.seat-grid{
-display:grid;
-grid-template-columns:repeat(3,80px);
-gap:10px;
-justify-content:center;
-}
-
-.seat-grid button{
-background:orange;
 padding:15px;
+margin:10px;
+border:4px solid black;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+
 }
 
-input{
-margin:5px;
-padding:5px;
+button:hover{
+
+background:lime;
+color:black;
+transform:rotate(3deg) scale(1.1);
+
+}
+
+.section{
+
+display:none;
+margin-top:40px;
+background:pink;
+padding:20px;
+border:5px dashed black;
+width:50%;
+margin-left:auto;
+margin-right:auto;
+
+}
+
+select{
+
+padding:10px;
+font-size:16px;
+
 }
